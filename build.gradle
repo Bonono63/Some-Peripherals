@@ -1,11 +1,11 @@
 plugins {
     id "architectury-plugin" version "3.4-SNAPSHOT"
-    id "dev.architectury.loom" version "1.1-SNAPSHOT" apply false
+    id "dev.architectury.loom" version "1.6-SNAPSHOT" apply false
 
     // Adds the Kotlin Gradle plugin
-    id 'org.jetbrains.kotlin.jvm' version '1.8.21' apply false
+    id 'org.jetbrains.kotlin.jvm' version '2.0.0' apply false
     // OPTIONAL Kotlin Serialization plugin
-    id 'org.jetbrains.kotlin.plugin.serialization' version '1.8.21'
+    id 'org.jetbrains.kotlin.plugin.serialization' version '2.0.0'
 
     id 'com.matthewprenger.cursegradle' version '1.4.0' apply false
     id "com.modrinth.minotaur" version "2.4.3" apply false
@@ -45,7 +45,7 @@ subprojects {
 
         mappings(loom.layered {
             officialMojangMappings()
-            parchment("org.parchmentmc.data:parchment-${rootProject.minecraft_version}:2022.09.04@zip")
+            //parchment("org.parchmentmc.data:parchment-${rootProject.minecraft_version}:2024.06.16@zip")
         })
     }
 }

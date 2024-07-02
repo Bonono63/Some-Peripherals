@@ -14,9 +14,9 @@ plugins {
     id "com.github.johnrengelman.shadow" version "7.1.2"
 
     // Adds the Kotlin Gradle plugin
-    id 'org.jetbrains.kotlin.jvm' version '1.8.21'
+    id 'org.jetbrains.kotlin.jvm' version '2.0.0'
     // OPTIONAL Kotlin Serialization plugin
-    id 'org.jetbrains.kotlin.plugin.serialization' version '1.8.21'
+    id 'org.jetbrains.kotlin.plugin.serialization' version '2.0.0'
 
     id "com.matthewprenger.cursegradle"
     id "com.modrinth.minotaur"
@@ -32,7 +32,7 @@ loom {
         mixinConfig "some_peripherals-common.mixins.json"
     }
     mixin {
-        defaultRefmapName = "some_peripherals-refmap.json"
+        //defaultRefmapName = "some_peripherals-refmap.json"
     }
 }
 
@@ -66,7 +66,7 @@ dependencies {
     // Remove the next line if you don't want to depend on the API
     modApi "dev.architectury:architectury-forge:${rootProject.architectury_version}"
 
-    modApi("org.valkyrienskies:valkyrienskies-118-forge:$rootProject.vs2_version") { transitive = false }
+    modApi("org.valkyrienskies:valkyrienskies-1201-forge:$rootProject.vs2_version") { transitive = false }
     implementation("org.valkyrienskies.core:api:$rootProject.vs_core_version")
 //    implementation("org.valkyrienskies.core:api-game:$vs_core_version")
 //    implementation("org.valkyrienskies.core:util:$vs_core_version")
@@ -76,10 +76,10 @@ dependencies {
     shadowCommon(project(path: ":common", configuration: "transformProductionForge")) { transitive = false }
 
     // Adds KFF as dependency and Kotlin libs
-    modImplementation 'thedarkcolour:kotlinforforge:3.12.0'
+    modImplementation 'thedarkcolour:kotlinforforge:5.3.0'
 
     // CC Tweaked
-    modImplementation("curse.maven:cctweaked-282001:4061947")
+    modImplementation("curse.maven:cc-tweaked-282001:5379173")
 
     // Apply Mixin AP
     annotationProcessor 'org.spongepowered:mixin:0.8.5:processor'
