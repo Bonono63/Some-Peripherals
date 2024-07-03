@@ -80,7 +80,8 @@ class DigitizerPeripheral(private val level: Level, private val pos: BlockPos, b
     }
 
     private fun canItemsStack(a: ItemStack, b: ItemStack): Boolean {
-        if (a.isEmpty || b.isEmpty || !a.sameItem(b) || !a.isStackable) return false
+        // TODO make sure that a.item.equals(b) is equivalent to a.sameItem(b)
+        if (a.isEmpty || b.isEmpty || !a.item.equals(b) || !a.isStackable) return false
         return if (a.hasTag() != b.hasTag()) false else (!a.hasTag() || a.tag == b.tag)
     }
 

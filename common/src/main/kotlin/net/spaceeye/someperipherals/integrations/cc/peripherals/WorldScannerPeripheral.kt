@@ -77,7 +77,7 @@ class WorldScannerPeripheral(private val level: Level, private val pos: BlockPos
         val range = SomePeripheralsConfig.SERVER.WORLD_SCANNER_SETTINGS.max_allowed_range
         if (range >= 0 && sqrt(x*x+y*y+z*z) > range) { return makeErrorReturn("Block is outside of range") }
 
-        return makeResult(level.getBlockState(BlockPos(x + pos.x, y + pos.y, z + pos.z)))
+        return makeResult(level.getBlockState(BlockPos((x + pos.x).toInt(), (y + pos.y).toInt(), (z + pos.z).toInt())))
     }
 
     @LuaFunction

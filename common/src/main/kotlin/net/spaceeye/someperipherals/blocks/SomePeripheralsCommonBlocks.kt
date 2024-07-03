@@ -12,6 +12,7 @@ import net.minecraft.world.level.block.SoundType
 import net.minecraft.world.level.block.state.BlockBehaviour
 import net.minecraft.world.level.material.MapColor
 import net.spaceeye.someperipherals.SomePeripherals
+import net.spaceeye.someperipherals.SomePeripheralsItems
 
 object SomePeripheralsCommonBlocks {
     private val BLOCKS = DeferredRegister.create(SomePeripherals.MOD_ID, Registries.BLOCK)
@@ -29,7 +30,7 @@ object SomePeripheralsCommonBlocks {
 
     fun registerItems(items: DeferredRegister<Item?>) {
         for (block in BLOCKS) {
-            items.register(block.id) { BlockItem(block.get(), Item.Properties().tab(TAB)) }
+            items.register(block.id) { BlockItem(block.get(), Item.Properties()) }
         }
     }
 }

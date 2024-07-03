@@ -1,6 +1,5 @@
 package net.spaceeye.someperipherals.fabric
 
-import dan200.computercraft.api.peripheral.IPeripheralProvider
 import io.github.fabricators_of_create.porting_lib.transfer.item.SlotItemHandler
 import net.minecraft.world.inventory.Slot
 import net.minecraft.world.level.block.entity.BlockEntity
@@ -10,8 +9,8 @@ import net.spaceeye.someperipherals.fabric.integrations.cc.SomePeripheralsPeriph
 import net.spaceeye.someperipherals.stuff.utils.CommonBlockEntityInventory
 
 object PlatformUtilsImpl {
-    @JvmStatic
-    fun getPeripheralProvider(): IPeripheralProvider = SomePeripheralsPeripheralProviderFabric()
+    //@JvmStatic
+    //fun getPeripheralProvider(): IPeripheralProvider = SomePeripheralsPeripheralProviderFabric()
 
     @JvmStatic
     fun getConfigBuilder(): AbstractConfigBuilder = FabricConfigBuilder()

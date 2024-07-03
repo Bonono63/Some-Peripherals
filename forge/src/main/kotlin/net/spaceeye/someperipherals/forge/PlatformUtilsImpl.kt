@@ -10,8 +10,8 @@ import net.minecraftforge.items.SlotItemHandler
 import net.spaceeye.someperipherals.blockentities.DigitizerBlockEntity
 
 object PlatformUtilsImpl {
-    @JvmStatic
-    fun getPeripheralProvider(): IPeripheralProvider = SomePeripheralsPeripheralProviderForge()
+    //@JvmStatic
+    //fun getPeripheralProvider(): IPeripheralProvider = SomePeripheralsPeripheralProviderForge()
 
     @JvmStatic
     fun getConfigBuilder(): AbstractConfigBuilder = ForgeConfigBuilder()

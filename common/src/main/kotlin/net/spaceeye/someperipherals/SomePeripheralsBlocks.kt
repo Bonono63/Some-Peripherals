@@ -18,7 +18,7 @@ object SomePeripheralsBlocks {
 
     fun registerItems(items: DeferredRegister<Item>) {
         BLOCKS.forEach {
-            items.register(it.id) { BlockItem(it.get(), Item.Properties().tab(SomePeripheralsItems.TAB)) }
+            items.register(it.id) { BlockItem(it.get(), Item.Properties()) }
         }
     }
 }

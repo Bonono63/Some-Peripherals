@@ -20,7 +20,7 @@ private fun getScanPos(level: Level, pos: BlockPos): BlockPos {
         val test = level.getShipManagingPos(pos)
         if (test != null) {
             val pos = test.toWorldCoordinates(pos)
-            return BlockPos(pos.x, pos.y, pos.z)
+            return BlockPos(pos.x.toInt(), pos.y.toInt(), pos.z.toInt())
         }
         return pos
     }
@@ -42,7 +42,7 @@ private fun scanForPlayers(r: Double, level: ServerLevel, pos: BlockPos): Mutabl
     val pos = getScanPos(level, pos)
     val res = arrayListOf<Any>()
     for (player in level.server.playerList.players) {
-        if ( !(player.level.dimension() == level.dimension()
+        if ( !(player.level().dimension() == level.dimension()
             && AABB(
                 pos.x-r, pos.y-r, pos.z-r,
                 pos.x+r, pos.y+r, pos.z+r

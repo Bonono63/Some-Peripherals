@@ -18,7 +18,9 @@ dependencies {
     api "org.jetbrains.kotlin:kotlin-reflect:1.9.10"
 
     // CC Restitched
-    modCompileOnly("curse.maven:cc-restitched-462672:3622561")
+    //fabric CC: Tweaked
+    //modCompileOnly("curse.maven:cc-restitched-462672:3622561")
+    modCompileOnly("curse.maven:cc-tweaked-282001:5379174")
 
     modCompileOnly (files(accelerated_raycasting_path))
 }

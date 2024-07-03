@@ -1,5 +1,7 @@
 package net.spaceeye.someperipherals.forge
 
+import dan200.computercraft.api.ComputerCraftAPI
+import dev.architectury.platform.Platform
 import dev.architectury.platform.forge.EventBuses
 import net.minecraftforge.api.distmarker.Dist
 import net.minecraftforge.common.MinecraftForge
@@ -9,6 +11,7 @@ import net.minecraftforge.fml.common.Mod
 import net.minecraftforge.fml.common.Mod.EventBusSubscriber
 import net.minecraftforge.fml.event.lifecycle.FMLClientSetupEvent
 import net.minecraftforge.fml.javafmlmod.FMLJavaModLoadingContext
+import net.spaceeye.someperipherals.PlatformUtils
 import net.spaceeye.someperipherals.SomePeripherals
 import net.spaceeye.someperipherals.SomePeripheralsCommands
 
