@@ -34,6 +34,7 @@ object SomePeripherals {
         SomePeripheralsBlocks.register()
         SomePeripheralsBlockEntities.register()
         SomePeripheralsItems.register()
+        SomePerpheralsCreativeTab.register()
         SomePeripheralsMenu.register()
 
         // There is a discrepancy in the fabric and forge versions of CC: Tweaked for registering peripherals in this verison

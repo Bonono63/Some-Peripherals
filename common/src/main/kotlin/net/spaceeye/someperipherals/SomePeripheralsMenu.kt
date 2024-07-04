@@ -10,7 +10,7 @@ import net.minecraft.world.inventory.MenuType
 import net.spaceeye.someperipherals.stuff.digitizer.DigitizerMenu
 
 object SomePeripheralsMenu {
-    private val MENU = DeferredRegister.create(SomePeripherals.MOD_ID, Registries.ITEM)
+    private val MENU = DeferredRegister.create(SomePeripherals.MOD_ID, Registries.MENU)
 
     @JvmField val DIGITIZER_MENU = registerMenuType("digitizer", ::DigitizerMenu)
 

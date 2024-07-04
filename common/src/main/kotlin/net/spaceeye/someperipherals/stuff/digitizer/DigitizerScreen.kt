@@ -1,7 +1,6 @@
 package net.spaceeye.someperipherals.stuff.digitizer
 
 import com.mojang.blaze3d.systems.RenderSystem
-import com.mojang.blaze3d.vertex.PoseStack
 import net.minecraft.client.gui.GuiGraphics
 import net.minecraft.client.gui.screens.inventory.AbstractContainerScreen
 import net.minecraft.client.renderer.GameRenderer
@@ -21,13 +20,16 @@ AbstractContainerScreen<DigitizerMenu>(menu, inv, component) {
         val x = (width - imageWidth) / 2
         val y = (height - imageHeight) / 2
 
-        blit(poseStack, x, y, 0, 0, imageWidth, imageHeight)
-        renderTooltip(GuiGraphics, mouseX, mouseY)
+        // I hope this is the correct replacement for
+        // blit(poseStack, x, y, 0, 0, imageWidth, imageHeight)
+        // TODO double check that this works
+        guiGraphics.blit(TEXTURE, x, y, 0, 0, imageWidth, imageHeight)
+        renderTooltip(guiGraphics, mouseX, mouseY)
     }
 
-    override fun render(poseStack: PoseStack, mouseX: Int, mouseY: Int, delta: Float) {
-        renderBackground(poseStack)
-        super.render(poseStack, mouseX, mouseY, delta)
-        renderTooltip(poseStack, mouseX, mouseY)
+    override fun render(guiGraphics: GuiGraphics, mouseX: Int, mouseY: Int, delta: Float) {
+        renderBackground(guiGraphics)
+        super.render(guiGraphics, mouseX, mouseY, delta)
+        renderTooltip(guiGraphics, mouseX, mouseY)
     }
 }

@@ -18,13 +18,6 @@ object SomePeripheralsItems {
 
     var LOGO: RegistrySupplier<Item> = ITEMS.register("someperipherals_logo") { Item(Item.Properties()) }
 
-    val TAB: CreativeModeTab = CreativeTabRegistry.create { callback ->
-        callback
-                .title(Component.translatable("someperipherals_tab"))
-                .icon { BuiltInRegistries.ITEM.get(LOGO.key)?.asItem()?.defaultInstance ?: ItemStack.EMPTY }
-                .build()
-    }
-
     var STATUS_GOGGLES: RegistrySupplier<Item> = ITEMS.register("status_goggles") { StatusGogglesItem() }
     var RANGE_GOGGLES: RegistrySupplier<Item> = ITEMS.register("range_goggles") { RangeGogglesItem() }
 
